@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushiram Yadav | .NET Backend Developer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Khushiram Yadav - Expert .NET Backend Developer specializing in C#, ASP.NET Core, SQL Server, and modern backend architecture patterns.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script><!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- jsPDF Library for PDF Generation -->
+    <link rel="stylesheet" href="assets/Style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><!-- Element SDK -->
+    <script src="script.js"></script>
+    <script src="assets/my.js"></script>
+
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+    </style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+</head>
+
+<body><!-- ========== FIXED HEADER ========== -->
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between"><!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="logo-circle"><span>K-Y</span>
+                    </div>
+                    <span class="text-lg font-bold hidden sm:block">Khushiram Yadav</span>
+                </div><!-- Desktop Navigation -->
+                <ul class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <li><a href="#home" class="nav-link hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="#about" class="nav-link hover:text-accent transition-colors">About</a></li>
+                    <li><a href="#skills" class="nav-link hover:text-accent transition-colors">Skills</a></li>
+                    <li><a href="#experience" class="nav-link hover:text-accent transition-colors">Experience</a></li>
+                    <li><a href="#contact" class="nav-link hover:text-accent transition-colors">Contact</a></li>
+                </ul><!-- Mobile Menu Button --> <button id="mobile-menu-btn"
+                    class="md:hidden text-2xl focus:outline-none" aria-label="Toggle menu"> <i class="fas fa-bars"></i>
+                </button>
+            </div><!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="flex flex-col space-y-3 text-sm font-medium">
+                    <li><a href="#home" class="mobile-nav-link block py-2 hover:text-accent transition-colors">Home</a>
+                    </li>
+                    <li><a href="#about"
+                            class="mobile-nav-link block py-2 hover:text-accent transition-colors">About</a></li>
+                    <li><a href="#skills"
+                            class="mobile-nav-link block py-2 hover:text-accent transition-colors">Skills</a></li>
+                    <li><a href="#experience"
+                            class="mobile-nav-link block py-2 hover:text-accent transition-colors">Experience</a></li>
+                    <li><a href="#contact"
+                            class="mobile-nav-link block py-2 hover:text-accent transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header><!-- ========== SCROLL TO TOP BUTTON ========== -->
+    <div id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up text-xl"></i>
+    </div><!-- ========== MAIN CONTENT ========== -->
+    <main class="pt-20"><!-- ========== HERO SECTION ========== -->
+        <section id="home"
+            class="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <div class="hero-bg"></div>
+            <div class="max-w-7xl mx-auto w-full relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"><!-- Left: Text Content -->
+                    <div class="text-center lg:text-left space-y-6 fade-up">
+                        <div class="inline-block"><span class="badge"> <i class="fas fa-code mr-2"></i>Backend Developer
+                            </span>
+                        </div>
+                        <h1 id="hero-name" class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">Hi, I'm
+                            <span class="gradient-text">Khushiram</span>
+                        </h1>
+                        <h2 id="hero-title" class="text-xl sm:text-2xl lg:text-3xl font-semibold text-accent">C# | .NET
+                            | SQL Backend Developer</h2>
+                        <div class="typing-cursor text-lg sm:text-xl text-muted min-h-[60px]"><span
+                                id="typed-text"></span>
+                        </div>
+                        <p id="hero-description" class="text-base sm:text-lg text-muted max-w-2xl mx-auto lg:mx-0">I'm a
+                            .NET Backend Developer skilled in building secure, scalable, high-performance applications
+                            using C#, .NET CORE MVC, Api, SQL, and modern backend design patterns.</p>
+                        <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+                            <button id="download-resume-btn"
+                                class="btn-primary px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-download"></i> <span>Download Resume</span>
+                            </button>
+                            <a href="#contact"
+                                class="btn-outline px-8 py-3 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-envelope"></i> <span>Get In Touch</span> </a>
+                        </div>
+                    </div><!-- Right: Animated Illustration -->
+                    <div class="relative fade-in">
+                        <div class="relative w-full max-w-md mx-auto"><!-- Central code icon -->
+                            <div
+                                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-2xl">
+                                <i class="fas fa-code text-5xl text-white"></i>
+                            </div><!-- Orbiting tech icons -->
+                            <div class="relative w-80 h-80 mx-auto">
+                                <div
+                                    class="absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-surface border-2 border-primary flex items-center justify-center shadow-lg">
+                                    <i class="fab fa-microsoft text-2xl text-primary"></i>
+                                </div>
+                                <div
+                                    class="absolute top-1/2 right-0 transform -translate-y-1/2 w-16 h-16 rounded-full bg-surface border-2 border-accent flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-database text-2xl text-accent"></i>
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-surface border-2 border-gold flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-server text-2xl text-gold"></i>
+                                </div>
+                                <div
+                                    class="absolute top-1/2 left-0 transform -translate-y-1/2 w-16 h-16 rounded-full bg-surface border-2 border-primary flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-shield-halved text-2xl text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section><!-- ========== ABOUT SECTION ========== -->
+
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-surface/30">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 fade-up">
+                    <h2 class="section-title text-3xl sm:text-4xl font-bold mb-4">About <span
+                            class="gradient-text">Me</span></h2>
+                    <p class="text-muted text-lg">Get to know more about my background and expertise</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left: Profile Image Placeholder -->
+                    <div class="fade-up">
+                        <div class="relative w-full max-w-md mx-auto">
+                            <div
+                                class="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-primary/30 flex items-center justify-center overflow-hidden">
+                                <div class="text-center p-8"><i
+                                        class="fas fa-user-tie text-9xl text-primary/40 mb-4"></i>
+                                    <p class="text-muted text-sm">Professional .NET Developer</p>
+                                </div>
+                            </div><!-- Decorative elements -->
+                            <div class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-accent/20 blur-2xl"></div>
+                            <div class="absolute -bottom-4 -left-4 w-32 h-32 rounded-full bg-primary/20 blur-2xl"></div>
+                        </div>
+                    </div><!-- Right: About Content -->
+                    <div class="space-y-6 fade-up">
+                        <p id="about-content" class="text-base sm:text-lg text-muted leading-relaxed">I am a backend
+                            developer proficient in <strong class="text-accent">C#, .NET Core, MVC, and SQL</strong>.
+                            Skilled in full SDLC, debugging, API development, and database management. I enjoy building
+                            maintainable and efficient backend systems using modern design patterns like <strong
+                                class="text-primary">RESTful APIs, MVC, Repository Pattern, and CQRS</strong>.
+                            Passionate about clean code, problem-solving, and delivering high-quality backend solutions.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 pt-4">
+                            <div class="bg-surface/50 rounded-lg p-4 border border-primary/20"><i
+                                    class="fas fa-graduation-cap text-2xl text-accent mb-2"></i>
+                                <h4 class="font-semibold mb-1">Education</h4>
+                                <p class="text-sm text-muted">B.C.A</p>
+                            </div>
+                            <div class="bg-surface/50 rounded-lg p-4 border border-primary/20"><i
+                                    class="fas fa-briefcase text-2xl text-primary mb-2"></i>
+                                <h4 class="font-semibold mb-1">Experience</h4>
+                                <p class="text-sm text-muted">2+ Years</p>
+                            </div>
+                            <div class="bg-surface/50 rounded-lg p-4 border border-primary/20"><i
+                                    class="fas fa-project-diagram text-2xl text-gold mb-2"></i>
+                                <h4 class="font-semibold mb-1">Projects</h4>
+                                <p class="text-sm text-muted">3+ Completed</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section><!-- ========== SKILLS SECTION ========== -->
+        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 fade-up">
+                    <h2 class="section-title text-3xl sm:text-4xl font-bold mb-4">Technical <span
+                            class="gradient-text">Skills</span></h2>
+                    <p class="text-muted text-lg">My expertise across various technologies and tools</p>
+                </div><!-- Languages & Frameworks -->
+                <div class="mb-12 fade-up">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center"><i class="fas fa-code text-primary mr-3"></i>
+                        Languages &amp; Frameworks</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fab fa-microsoft text-2xl text-primary"></i> <span
+                                        class="font-semibold">C#</span>
+                                </div><span class="text-sm text-muted">85%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="95" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fas fa-layer-group text-2xl text-primary"></i> <span
+                                        class="font-semibold">.NET Core</span>
+                                </div><span class="text-sm text-muted">90%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="90" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fas fa-table text-2xl text-accent"></i> <span
+                                        class="font-semibold">Entity Framework</span>
+                                </div><span class="text-sm text-muted">85%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="88" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i class="fab fa-html5 text-2xl text-gold"></i>
+                                    <span class="font-semibold">HTML, CSS, jQuery</span>
+                                </div><span class="text-sm text-muted">75%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="85" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fab fa-bootstrap text-2xl text-primary"></i> <span
+                                        class="font-semibold">Bootstrap</span>
+                                </div><span class="text-sm text-muted">70%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="87" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Database Management -->
+                <div class="mb-12 fade-up">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center"><i
+                            class="fas fa-database text-accent mr-3"></i> Database Management</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fas fa-database text-2xl text-accent"></i> <span
+                                        class="font-semibold">SQL Server</span>
+                                </div><span class="text-sm text-muted">80%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="93" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fas fa-database text-2xl text-primary"></i> <span
+                                        class="font-semibold">MS SQL</span>
+                                </div><span class="text-sm text-muted">80%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="85" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- API Development & Patterns -->
+                <div class="mb-12 fade-up">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center"><i
+                            class="fas fa-network-wired text-gold mr-3"></i> API Development &amp; Patterns</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fas fa-plug text-2xl text-primary"></i> <span
+                                        class="font-semibold">RESTful APIs</span>
+                                </div><span class="text-sm text-muted">90%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="94" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fas fa-server text-2xl text-accent"></i> <span class="font-semibold">Web
+                                        API</span>
+                                </div><span class="text-sm text-muted">90%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="92" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fas fa-sitemap text-2xl text-gold"></i> <span
+                                        class="font-semibold">MVC</span>
+                                </div><span class="text-sm text-muted">80%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="90" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fas fa-folder-tree text-2xl text-primary"></i> <span
+                                        class="font-semibold">Repository Pattern</span>
+                                </div><span class="text-sm text-muted">90%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="95" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fas fa-arrows-split-up-and-left text-2xl text-accent"></i> <span
+                                        class="font-semibold">CQRS</span>
+                                </div><span class="text-sm text-muted">90%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="82" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Tools -->
+                <div class="mb-12 fade-up">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center"><i class="fas fa-tools text-primary mr-3"></i>
+                        Tools &amp; Technologies</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fas fa-laptop-code text-2xl text-accent"></i> <span
+                                        class="font-semibold">Visual Studio</span>
+                                </div><span class="text-sm text-muted">80%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="90" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fab fa-git-alt text-2xl text-gold"></i> <span class="font-semibold">Git
+                                        Hub</span>
+                                </div><span class="text-sm text-muted">75%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="88" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fas fa-balance-scale text-2xl text-accent"></i> <span
+                                        class="font-semibold">Load Balancing</span>
+                                </div><span class="text-sm text-muted">70%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="75" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center space-x-3"><i
+                                        class="fas fa-network-wired text-2xl text-primary"></i> <span
+                                        class="font-semibold">API Gateway</span>
+                                </div><span class="text-sm text-muted">70%</span>
+                            </div>
+                            <div class="w-full bg-surface rounded-full h-2 overflow-hidden">
+                                <div class="skill-bar" data-width="78" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Soft Skills -->
+                <div class="fade-up">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center"><i
+                            class="fas fa-lightbulb text-accent mr-3"></i> Soft Skills</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-surface/50 rounded-lg p-4 text-center border border-primary/20 card-hover"><i
+                                class="fas fa-brain text-3xl text-primary mb-2"></i>
+                            <p class="font-semibold text-sm">Problem-Solving</p>
+                        </div>
+                        <div class="bg-surface/50 rounded-lg p-4 text-center border border-primary/20 card-hover"><i
+                                class="fas fa-users text-3xl text-accent mb-2"></i>
+                            <p class="font-semibold text-sm">Teamwork</p>
+                        </div>
+                        <div class="bg-surface/50 rounded-lg p-4 text-center border border-primary/20 card-hover"><i
+                                class="fas fa-comments text-3xl text-gold mb-2"></i>
+                            <p class="font-semibold text-sm">Communication</p>
+                        </div>
+                        <div class="bg-surface/50 rounded-lg p-4 text-center border border-primary/20 card-hover"><i
+                                class="fas fa-clock text-3xl text-primary mb-2"></i>
+                            <p class="font-semibold text-sm">Time Management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section><!-- ========== EXPERIENCE SECTION ========== -->
+
+        <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-surface/30">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12 fade-up">
+                    <h2 class="section-title text-3xl sm:text-4xl font-bold mb-4">Work <span
+                            class="gradient-text">Experience</span></h2>
+                    <p class="text-muted text-lg">My professional journey and achievements</p>
+                </div>
+                <div class="space-y-8"><!-- Experience 1 -->
+                    <div class="timeline-item fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="bg-surface/50 rounded-xl p-6 border border-primary/20 card-hover">
+                            <div class="flex flex-wrap items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-accent mb-1">Backend Developer</h3>
+                                    <p class="text-lg font-semibold mb-2">Ways and Means Technology</p>
+                                    <p class="text-sm text-muted flex items-center"><i
+                                            class="fas fa-calendar-alt mr-2"></i> March 2025 – Present</p>
+                                </div><span class="badge mt-2 sm:mt-0">Current</span>
+                            </div>
+                            <ul class="space-y-2 text-muted">
+                                <li class="flex items-start"><i class="fas fa-check-circle text-accent mr-3 mt-1"></i>
+                                    <span>Skilled in all SDLC phases for Windows &amp; web applications</span>
+                                </li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-accent mr-3 mt-1"></i>
+                                    <span>Experience building &amp; maintaining applications using C#, .NET, and
+                                        SQL</span>
+                                </li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-accent mr-3 mt-1"></i>
+                                    <span>Focus on building new systems and enhancing existing ones</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- Experience 2 -->
+                    <div class="timeline-item fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="bg-surface/50 rounded-xl p-6 border border-primary/20 card-hover">
+                            <div class="flex flex-wrap items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-primary mb-1">Software Developer</h3>
+                                    <p class="text-lg font-semibold mb-2">ARV Softwares</p>
+                                    <p class="text-sm text-muted flex items-center"><i
+                                            class="fas fa-calendar-alt mr-2"></i> April 2024 – January 2025</p>
+                                </div>
+                            </div>
+                            <ul class="space-y-2 text-muted">
+                                <li class="flex items-start"><i class="fas fa-check-circle text-primary mr-3 mt-1"></i>
+                                    <span>Designed &amp; developed applications using C#, .NET, SQL Server</span>
+                                </li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-primary mr-3 mt-1"></i>
+                                    <span>Debugged and upgraded existing systems</span>
+                                </li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-primary mr-3 mt-1"></i>
+                                    <span>Worked on database-driven business applications</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section><!-- ========== STATS SECTION ========== -->
+
+        <section id="stats" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12 fade-up">
+                    <h2 class="section-title text-3xl sm:text-4xl font-bold mb-4">By The <span
+                            class="gradient-text">Numbers</span></h2>
+                    <p class="text-muted text-lg">Achievements and milestones in my career</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                    
+                    <!-- Stat 1 -->
+                    <div class="stat-card p-8 text-center fade-up">
+                        <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-project-diagram text-2xl text-primary"></i>
+                        </div>
+                        <div class="text-5xl font-bold gradient-text mb-2"><span class="counter"
+                                data-target="3+">0</span>+
+                        </div>
+                        <p class="text-muted uppercase tracking-wider text-sm">Projects Completed</p>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="stat-card p-8 text-center fade-up">
+                        <!--<div class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-2xl text-accent"></i>
+                        </div>
+                        <div class="text-5xl font-bold gradient-text mb-2"><span class="counter"
+                                data-target="7">0</span>+
+                        </div>
+                        <p class="text-muted uppercase tracking-wider text-sm">Freelance Clients</p> -->
+                    </div>
+                    
+                    <!-- Stat 3 -->
+                    <div class="stat-card p-8 text-center fade-up">
+                        <div class="w-16 h-16 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4"><i
+                                class="fas fa-clock text-2xl text-gold"></i>
+                        </div>
+                        <div class="text-5xl font-bold gradient-text mb-2"><span class="counter"
+                                data-target="2">0</span>+
+                        </div>
+                        <p class="text-muted uppercase tracking-wider text-sm">Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section><!-- ========== CONTACT SECTION ========== -->
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-surface/30">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12 fade-up">
+                    <h2 id="contact-heading" class="section-title text-3xl sm:text-4xl font-bold mb-4">Let's Build
+                        Something <span class="gradient-text">Amazing</span></h2>
+                    <p class="text-muted text-lg">Have a project in mind? Let's discuss how I can help</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12"><!-- Left: Contact Info -->
+                    <div class="space-y-8 fade-up">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                            <p class="text-muted mb-8">I'm always open to discussing new projects, creative ideas, or
+                                opportunities to be part of your vision. Feel free to reach out!</p>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Email</h4>
+                                    <p class="text-muted text-sm">ydvkhushiram@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-phone text-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Phone</h4>
+                                    <p class="text-muted text-sm">+91 9588297938</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-gold"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Location</h4>
+                                    <p class="text-muted text-sm">Available for Remote Work</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-4">Connect With Me</h4>
+                            <div class="flex space-x-4"><a href="https://github.com/khushiram-yadav" target="_blank"
+                                    rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                                    <i class="fab fa-github text-xl"></i> </a>
+                                <a href="https://www.linkedin.com/in/khushiram-yadav-1a2a20343/" target="_blank"
+                                    rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in text-xl"></i> </a>
+                                <a href="mailto:ydvkhushiram@gmail.com" class="social-icon" aria-label="Email">
+                                    <i class="fas fa-envelope text-xl"></i> </a>
+                                <a href="https://instagram.com/khushiram__yadav_." target="_blank"
+                                    rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div><!-- Right: Contact Form -->
+                    <div class="fade-up">
+                        <form id="contact-form" class="space-y-6">
+                            <div><label for="name" class="block text-sm font-semibold mb-2">Your Name</label> <input
+                                    type="text" id="name" name="name" class="form-input" placeholder="John Doe"
+                                    required>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                                <!-- Email -->
+                                <div>
+                                    <label for="email" class="block text-sm font-semibold mb-2">Your Email</label>
+                                    <input type="email" id="email" name="email" class="form-input"
+                                        placeholder="john@example.com" required>
+                                </div>
+
+                                <!-- Contact Number -->
+                                <div>
+                                    <label for="phone" class="block text-sm font-semibold mb-2">Contact Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input"
+                                        placeholder="+91 9588297933" required>
+                                </div>
+
+                            </div>
+
+                            <div><label for="subject" class="block text-sm font-semibold mb-2">Subject</label> <input
+                                    type="text" id="subject" name="subject" class="form-input"
+                                    placeholder="Project Inquiry" required>
+                            </div>
+                            <div><label for="message" class="block text-sm font-semibold mb-2">Message</label> <textarea
+                                    id="message" name="message" rows="5" class="form-input resize-none"
+                                    placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <div id="form-message" class="hidden"></div><button type="submit"
+                                class="btn-primary w-full py-3 rounded-full font-semibold inline-flex items-center justify-center space-x-2">
+                                <i class="fas fa-paper-plane"></i> <span>Send Message</span> </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- ========== FOOTER ========== -->
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+                <div class="flex items-center space-x-3">
+                    <div class="logo-circle w-10 h-10 text-sm"><span>KY</span>
+                    </div><span class="text-sm text-muted">�� <span id="year"></span> Khushiram Yadav. All rights
+                        reserved.</span>
+                </div>
+                <p class="text-sm text-muted">Built with passion using .NET mindset 💜</p>
+            </div>
+        </div>
+    </footer><!-- ========== JAVASCRIPT ========== -->
+    <script>
+
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9a4fcaf7d70a1bd7',t:'MTc2NDIyNzI5MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
