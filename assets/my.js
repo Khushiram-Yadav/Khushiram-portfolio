@@ -166,8 +166,8 @@ $('#download-resume-btn').on('click', function (e) {
 
     // Create hidden download link
     var link = document.createElement('a');
-    link.href = "assets/Files/Khushiram Resume.pdf"; // exact path
-    link.download = "Khushiram_Resume.pdf"; // forces download
+    link.href = "assets/Files/Khushiram_.NET_Dev.pdf"; // exact path
+    link.download = "Khushiram_.NET_Dev.pdf"; // forces download
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -176,7 +176,7 @@ $('#download-resume-btn').on('click', function (e) {
     setTimeout(function () {
         btn.prop('disabled', false);
         btn.text('Download Resume');
-    }, 5000);
+    },1000);
 });
 
 
