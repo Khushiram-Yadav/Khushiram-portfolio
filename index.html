@@ -137,13 +137,21 @@
                     <!-- Left: Profile Image Placeholder -->
                     <div class="fade-up">
                         <div class="relative w-full max-w-md mx-auto">
-                            <div
-                                class="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-primary/30 flex items-center justify-center overflow-hidden">
-                                <div class="text-center p-8"><i
-                                        class="fas fa-user-tie text-9xl text-primary/40 mb-4"></i>
-                                    <p class="text-muted text-sm">Professional .NET Developer</p>
-                                </div>
-                            </div><!-- Decorative elements -->
+                            <div class="group relative w-60 md:w-64 aspect-[4/5]
+                                rounded-xl overflow-hidden
+                                bg-slate-800
+                                border border-white/15
+                                shadow-md
+                                transition-all duration-300
+                                hover:-translate-y-1 hover:shadow-xl">
+
+                                <img src="assets/Images/DevImg.jpg" alt="Khushiram Yadav" class="w-full h-full object-cover
+                                    transition-transform duration-500
+                                    group-hover:scale-[1.03]" />
+
+                            </div>
+
+                            <!-- Decorative elements -->
                             <div class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-accent/20 blur-2xl"></div>
                             <div class="absolute -bottom-4 -left-4 w-32 h-32 rounded-full bg-primary/20 blur-2xl"></div>
                         </div>
@@ -486,7 +494,7 @@
                     <p class="text-muted text-lg">Achievements and milestones in my career</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                    
+
                     <!-- Stat 1 -->
                     <div class="stat-card p-8 text-center fade-up">
                         <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
@@ -508,7 +516,7 @@
                         </div>
                         <p class="text-muted uppercase tracking-wider text-sm">Freelance Clients</p> -->
                     </div>
-                    
+
                     <!-- Stat 3 -->
                     <div class="stat-card p-8 text-center fade-up">
                         <div class="w-16 h-16 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4"><i
